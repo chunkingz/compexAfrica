@@ -99,6 +99,7 @@
       <li class="list-inline-item"><a href="#">Privacy</a></li>
       <li class="list-inline-item"><a href="#">Terms</a></li>
       <li class="list-inline-item"><a href="#">Support</a></li>
+      <li class="list-inline-item"><a href="https://github.com/chunkingz/compexAfrica">Github</a></li>
     </ul>
   </footer>
   
@@ -117,7 +118,7 @@
       const tenure = parseFloat($("#tenure").val());
 
       const interestPerMonth = parseFloat(interestRate / 12);
-      const monthlyGain = parseFloat(monthlySub * interestPerMonth / 100);
+      const monthlyGain = parseFloat((monthlySub * interestPerMonth) / 100);
       const closing = parseFloat(monthlyGain + monthlySub);
       const total = parseFloat(closing * tenure).toFixed(2);
 

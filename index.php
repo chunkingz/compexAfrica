@@ -112,14 +112,14 @@
 <script type="text/javascript">
   $( () => {
     $("#submit").click( () => {
-      const monthlySub = parseInt($("#monthlySub").val());
-      const interestRate = parseInt($("#interestRate").val());
-      const tenure = parseInt($("#tenure").val());
+      const monthlySub = parseFloat($("#monthlySub").val());
+      const interestRate = parseFloat($("#interestRate").val());
+      const tenure = parseFloat($("#tenure").val());
 
-      const interestPerMonth = interestRate / 12;
-      const monthlyGain = monthlySub / 100;
-      const closing = monthlyGain + monthlySub;
-      const total = closing * tenure;
+      const interestPerMonth = parseFloat(interestRate / 12);
+      const monthlyGain = parseFloat(monthlySub * interestPerMonth / 100);
+      const closing = parseFloat(monthlyGain + monthlySub);
+      const total = parseFloat(closing * tenure).toFixed(2);
 
       $("#displayMonthlySub").html(monthlySub);
       $("#displayInterest").html(interestRate);

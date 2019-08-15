@@ -127,6 +127,7 @@
       $("#displayTenure").html(tenure);
       $("#displayTotal").html(total);
 
+      $(".right-tab").slideUp(100);
       $(".right-tab").slideDown(500);
     });
   })
